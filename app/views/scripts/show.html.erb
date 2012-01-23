@@ -10,10 +10,15 @@
   <%= @script.user_id %>
 </p>
 <p>
-<b> Script with Random Test thrown in</b>
+
 <p>
 </p>
- <textarea rows="20" cols="40" disabled = true><%= @script.content.gsub("(test)", @tests.sample.content) %></textarea>
+<% if @tests.sample == nil %>
+	<% %>
+<%else%>
+	<b> Script with Random Test thrown in</b>
+	<textarea rows="20" cols="40" disabled = true><%= @script.content.gsub("(test)", @tests.sample.content) %></textarea>
+<%end%>
 
 </p>
 
