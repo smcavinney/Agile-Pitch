@@ -1,12 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Content:</b>
+  <b>Content:</b> | <%= link_to 'Edit Test', edit_test_path(@test) %>
+  <div>
   <%= @test.content %>
 </p>
 
 <p>
-  <b>Content:</b>
+  <b>How it looks in the script:</b>
 </p>
 <p>
    <textarea rows="20" cols="40" disabled = true><%= @script.gsub("(test)", @test.content) %></textarea>
@@ -15,10 +16,10 @@
 
 
 <p>
-  <b>Script:</b>
+  <b>Script:</b> 
   <%= @test.script_id %>
 </p>
 
 
-<%= link_to 'Edit', edit_test_path(@test) %> |
-<%= link_to 'Back', tests_path %>
+
+<%= link_to 'Back', tests_path %> | <%= link_to 'Go to Script Page', @script %>
