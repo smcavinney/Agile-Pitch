@@ -15,7 +15,7 @@
 <p>
 </p>
 <% if @tests.sample == nil %>
-	<% %>
+	<%= link_to 'New Test', new_test_path %>
 <%else%>
 	<b> Script with Random Test thrown in</b> | <%= link_to 'Edit Test', edit_test_path(@test) %> | <%= link_to 'New Test', new_test_path %>
 	<div>
