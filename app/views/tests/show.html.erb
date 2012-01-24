@@ -10,16 +10,17 @@
   <b>How it looks in the script:</b>
 </p>
 <p>
-   <textarea rows="20" cols="40" disabled = true><%= @script.gsub("(test)", @test.content) %></textarea>
+   <textarea rows="20" cols="40" disabled = true><%= @script.content.gsub("(test)", @test.content) %></textarea>
 </p>
 
 
 
 <p>
-  <b>Script:</b> 
-  <%= @test.script_id %>
+  <b>See the Script in <%= link_to"Action", @script %></b>
+</p>
+<p>
+Or create a <%= link_to "new test", new_test_path %>.
 </p>
 
 
-
-<%= link_to 'Back', tests_path %> | <%= link_to 'Go to Script Page', @script %>
+<%= link_to 'Back', tests_path %>

@@ -14,7 +14,7 @@ class TestsController < ApplicationController
   # GET /tests/1.json
   def show
     @test = Test.find(params[:id])
-    @script = @test.script.content
+    @script = @test.script
 
     respond_to do |format|
       format.html # show.html.erb
