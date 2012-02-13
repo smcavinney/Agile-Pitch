@@ -21,6 +21,17 @@ class ScriptsController < ApplicationController
     end
   end
 
+  # GET /scripts/pitch/1
+  # GET /scripts/pitch/1.json
+  def show
+    @script = Script.find(params[:id])
+    @tests = Test.find_all_by_script_id(@script.id)
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @script }
+    end
+  end
+
   # GET /scripts/new
   # GET /scripts/new.json
   def new

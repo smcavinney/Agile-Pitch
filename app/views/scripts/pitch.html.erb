@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+</p>
+<% if @tests.sample == nil %>
+	<b><%= link_to 'New Test', new_test_path %></b>
+<%else%>
+	<b> Script with Random Test thrown in</b> | <%= link_to 'Edit Test', edit_test_path(@test) %> | <%= link_to 'New Test', new_test_path %>
+	<div>
+	<textarea rows="20" cols="40" disabled = true><%= init_script %></textarea>
+<%end%>
+
+</p>
+
+<%= link_to 'Back', scripts_path %>
