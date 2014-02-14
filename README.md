@@ -1,6 +1,10 @@
 Agile-Pitch
 ===========
 
+## This is now abandoned. This was rebuilt as an internal hackathon project at RJMetrics. ##
+
+
+
 AB testing sales pitches
 
 Todo:
