@@ -1,7 +1,7 @@
 Agile-Pitch
 ===========
 
-## This is now abandoned. This was rebuilt as an internal hackathon project at RJMetrics. ##
+## This is now abandoned. ##
 
 
 
